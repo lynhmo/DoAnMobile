@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, TouchableOpacity, Image } from "react-native";
+import { View, Text, TouchableOpacity, Image, StyleSheet } from "react-native";
 
 export default function MyTabBar({ state, descriptors, navigation }) {
   var imgArr = [
@@ -12,10 +12,12 @@ export default function MyTabBar({ state, descriptors, navigation }) {
     <View
       style={{
         flexDirection: "row",
-        backgroundColor: "#fff",
+        backgroundColor: "#ea7f0a",
         height: 60,
         justifyContent: "center",
         alignItems: "center",
+        borderTopLeftRadius: 30,
+        borderTopRightRadius: 30,
       }}
     >
       {state.routes.map((route, index) => {
@@ -40,24 +42,36 @@ export default function MyTabBar({ state, descriptors, navigation }) {
             onPress={onPress}
             style={{ flex: 1, alignItems: "center" }}
           >
-            <Image
-              style={{
-                tintColor: isFocused ? "#333" : "#222",
-                height: 22,
-                width: 22,
-                resizeMode: "contain",
-              }}
-              source={imgArr[index]}
-            />
             <View
               style={{
-                marginTop: 4,
-                height: 2,
-                width: 8,
-                borderRadius: 10,
-                backgroundColor: isFocused ? "#333" : "transparent",
+                backgroundColor: isFocused ? "#ebaf09" : "transparent",
+                alignItems: "center",
+                justifyContent: "center",
+                marginVertically: 20,
+                width: 45,
+                height: 45,
+                borderRadius: 25,
               }}
-            />
+            >
+              <Image
+                style={{
+                  tintColor: isFocused ? "#333" : "#222",
+                  height: 22,
+                  width: 22,
+                  resizeMode: "contain",
+                }}
+                source={imgArr[index]}
+              />
+              <View
+                style={{
+                  marginTop: 4,
+                  height: 2,
+                  width: 8,
+                  borderRadius: 10,
+                  backgroundColor: isFocused ? "#333" : "transparent",
+                }}
+              />
+            </View>
           </TouchableOpacity>
         );
       })}

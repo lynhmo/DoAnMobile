@@ -14,6 +14,7 @@ function AppNavigation() {
       <Stack.Navigator
         screenOptions={{
           headerShown: false,
+          cardStyle: { backgroundColor: "#f4e6dc" },
         }}
       >
         <Stack.Screen name="Login" component={Login} />

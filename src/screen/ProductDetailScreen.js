@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { View, Text, Image, TouchableOpacity, ScrollView } from "react-native";
+import {
+  View,
+  Text,
+  Image,
+  TouchableOpacity,
+  ScrollView,
+  StyleSheet,
+} from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { Picker } from "@react-native-picker/picker";
 import CustomButton from "../components/CustomButton";
@@ -9,7 +16,7 @@ export default function ProductDetailScreen({ navigation, route }) {
   const params = route.params;
   const { item } = params;
   const [amount, setAmount] = useState(1);
-  const [size, setSize] = useState(item.size[0]);
+  // const [size, setSize] = useState(item.size[0]);
   const onGoBack = () => {
     navigation.goBack();
   };
@@ -38,104 +45,53 @@ export default function ProductDetailScreen({ navigation, route }) {
     navigation.navigate("CartScreen");
   };
   return (
-    <ScrollView style={{ backgroundColor: "#fff", flex: 1 }}>
-      <View style={{ position: "relative" }}>
-        <Image
-          style={{ width: "100%", height: 300 }}
-          source={{ uri: item.image }}
-        />
+    <ScrollView style={{ backgroundColor: "#f4e6dc", flex: 1 }}>
+      <View style={{ marginTop: 10 }}>
         <TouchableOpacity
           onPress={onGoBack}
           style={{
-            backgroundColor: "#333",
-            position: "absolute",
-            top: 30,
-            left: 12,
+            backgroundColor: "#ea7f0a",
+            // position: "absolute",
+            // top: 30,
+            // left: 12,
             width: 40,
             height: 40,
             justifyContent: "center",
             alignItems: "center",
             borderRadius: 100,
+            marginLeft: 10,
           }}
         >
-          <Ionicons name="chevron-back-outline" size={30} color="white" />
+          {/* <Ionicons name="chevron-back-outline" size={30} color="white" /> */}
+          <Image
+            style={{ width: 24, height: 24 }}
+            source={require("../../assets/icon/angle-left-thick.png")}
+          />
         </TouchableOpacity>
+        <Image
+          style={{ width: "100%", height: 400, marginTop: 12 }}
+          source={require("../../assets/mobile_image/dac-nhan-tam.jpg")}
+        />
       </View>
-      <View style={{ paddingHorizontal: 12, marginTop: 12 }}>
-        <Text style={{ fontSize: 25, fontWeight: "bold" }}>{item.name}</Text>
-        <Text style={{ color: "#F99928", fontSize: 16 }}>{item.owner}</Text>
-        <Text
+      <View style={{ paddingHorizontal: 12, marginTop: 12, paddingBottom: 30 }}>
+        <Text style={styles.bookname}>{item.name}</Text>
+        <View style={styles.textDescriptionContainer}>
+          <Text style={styles.descriptionTitle}>Description</Text>
+          <Text style={styles.textDescription}>{item.description}</Text>
+        </View>
+        <View
           style={{
-            color: "#000",
-            fontSize: 12,
-            fontWeight: "bold",
-            marginTop: 24,
+            flexDirection: "row",
+            marginTop: 20,
+            marginBottom: 10,
+            justifyContent: "space-between",
           }}
         >
-          MÔ TẢ
-        </Text>
-        <Text
-          style={{
-            color: "gray",
-          }}
-        >
-          {item.description}
-        </Text>
-        <View style={{ flexDirection: "row", marginTop: 20 }}>
+          {/* <View style={{ flex: 1 }} /> */}
           <View>
-            <Text
-              style={{
-                color: "#333",
-                fontSize: 10,
-                fontWeight: "bold",
-                marginLeft: 12,
-              }}
-            >
-              SIZE
-            </Text>
-            <View
-              style={{
-                backgroundColor: "#f4f4f4",
-                borderRadius: 100,
-                paddingHorizontal: 8,
-              }}
-            >
-              <Picker
-                style={{ width: 140, height: 40 }}
-                selectedValue={size}
-                onValueChange={(itemValue, itemIndex) => setSize(itemValue)}
-              >
-                {item.size.map((value, index) => (
-                  <Picker.Item key={index} label={value} value={value} />
-                ))}
-              </Picker>
-            </View>
-          </View>
-          <View style={{ flex: 1 }} />
-          <View>
-            <Text
-              style={{
-                color: "#333",
-                fontSize: 10,
-                fontWeight: "bold",
-                marginLeft: 12,
-                marginTop: 70,
-              }}
-            >
-              SỐ LƯỢNG
-            </Text>
-            <View
-              style={{
-                backgroundColor: "#F4F4F4",
-                paddingHorizontal: 16,
-                borderRadius: 100,
-                marginTop: 10,
-                width: 150,
-                paddingVertical: 8,
-                flexDirection: "row",
-              }}
-            >
-              <Text style={{ color: "#000", flex: 1 }}>{amount}</Text>
+            <Text style={styles.amount}>Amount</Text>
+            <View style={styles.amountContainer}>
+              <Text style={styles.amoutValue}>{amount}</Text>
               <TouchableOpacity
                 onPress={() => {
                   if (amount > 1) setAmount((val) => val - 1);
@@ -152,30 +108,11 @@ export default function ProductDetailScreen({ navigation, route }) {
               </TouchableOpacity>
             </View>
           </View>
-        </View>
-        <View style={{ flexDirection: "row", marginTop: 20 }}>
-          <View style={{ flex: 9 }}>
-            <Text
-              style={{
-                color: "#000",
-                fontSize: 10,
-                textAlign: "right",
-                fontWeight: "bold",
-              }}
-            >
-              TỔNG
-            </Text>
-            <Text
-              style={{
-                color: "#333",
-                fontSize: 30,
-                textAlign: "right",
-                fontWeight: "bold",
-                marginTop: 10,
-              }}
-            >
-              {item.price * amount} VND
-            </Text>
+          <View style={{}}>
+            <View style={{ flex: 9 }}>
+              <Text style={styles.totalTitle}>Total</Text>
+              <Text style={styles.total}>{item.price * amount} VND</Text>
+            </View>
           </View>
         </View>
         <CustomButton
@@ -187,3 +124,61 @@ export default function ProductDetailScreen({ navigation, route }) {
     </ScrollView>
   );
 }
+const styles = StyleSheet.create({
+  textDescription: {
+    color: "black",
+    fontSize: 14,
+  },
+  textDescriptionContainer: {
+    backgroundColor: "#fff",
+    borderRadius: 10,
+    padding: 10,
+  },
+  bookname: {
+    fontSize: 25,
+    fontWeight: "bold",
+    color: "#07204c",
+    marginBottom: 5,
+    // marginLeft: 10,
+  },
+  amount: {
+    color: "#333",
+    fontSize: 16,
+    fontWeight: "bold",
+    marginLeft: 12,
+  },
+  total: {
+    color: "#07204c",
+    fontSize: 30,
+    textAlign: "right",
+    fontWeight: "bold",
+    marginTop: 5,
+  },
+  totalTitle: {
+    color: "#000",
+    fontSize: 16,
+    textAlign: "right",
+    fontWeight: "bold",
+  },
+  descriptionTitle: {
+    color: "#07204c",
+    fontSize: 16,
+    fontWeight: "bold",
+  },
+  amoutValue: {
+    color: "#000",
+    flex: 1,
+    fontSize: 20,
+    marginStart: 10,
+  },
+  button: {},
+  amountContainer: {
+    backgroundColor: "#F4F4F4",
+    paddingHorizontal: 16,
+    borderRadius: 100,
+    marginTop: 3,
+    width: 150,
+    paddingVertical: 8,
+    flexDirection: "row",
+  },
+});

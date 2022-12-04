@@ -38,9 +38,9 @@ export default function CartScreen() {
   useEffect(() => {
     getCartData();
   }, [isFocused]);
-  const renderItem = ({ item, index }) => {
-    return <CartItem item={item} index={index} onChange={setcartList} />;
-  };
+  // const renderItem = ({ item, index }) => {
+  //   return <CartItem item={item} index={index} onChange={setcartList} />;
+  // };
   const getTotal = () => {
     let total = 0;
     cartList.map((value) => (total += value.price * value.amount));
@@ -90,7 +90,7 @@ export default function CartScreen() {
           {getTotal()} VND
         </Text>
       </View>
-      {cartList.length > 0 ? (
+      {/* {cartList.length > 0 ? (
         <FlatList
           style={{ marginTop: 12 }}
           data={cartList}
@@ -106,7 +106,7 @@ export default function CartScreen() {
             Giỏ hàng đang trống
           </Text>
         </View>
-      )}
+      )} */}
 
       <CustomButton
         onPress={onFinish}

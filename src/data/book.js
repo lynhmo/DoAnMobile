@@ -1,8 +1,8 @@
 export const manga = [
   {
     id: 0,
-    name: " Bleach - Tập 67: Black",
-    image: "mobile_image/bleach---tap-67---black.jpg",
+    name: "Bleach - Tập 67: Black",
+    image: "bleach---tap-67---black.jpg",
     price: 50000,
     type: ["action", "fantasy", "comedy", "16+"],
     description:
@@ -10,9 +10,8 @@ export const manga = [
   },
   {
     id: 1,
-    name: " Bleach - Tập 68: The Oridinary Peace",
-    image:
-      "../../assets/mobile_image/bleach---tap-68---the-oridinary-peace.jpg",
+    name: "Bleach - Tập 68: The Oridinary Peace",
+    image: "bleach---tap-68---the-oridinary-peace.jpg",
     price: 50000,
     type: ["action", "fantasy", "comedy", "16+"],
     description:
@@ -20,9 +19,8 @@ export const manga = [
   },
   {
     id: 2,
-    name: " Bleach - Tập 71: Baby Hold Your Hand",
-    image:
-      "../../assets/mobile_image/bleach---tap-71---baby-hold-your-hand.jpg",
+    name: "Bleach - Tập 71: Baby Hold Your Hand",
+    image: "bleach---tap-71---baby-hold-your-hand.jpg",
     price: 50000,
     type: ["action", "fantasy", "comedy", "16+"],
     description:
@@ -30,8 +28,8 @@ export const manga = [
   },
   {
     id: 3,
-    name: " Bleach - Tập 70: Friend",
-    image: "../../assets/mobile_image/bleach---tap-70---friend.jpg",
+    name: "Bleach - Tập 70: Friend",
+    image: "bleach---tap-70---friend.jpg",
     price: 50000,
     type: ["action", "fantasy", "comedy", "16+"],
     description:
@@ -39,8 +37,8 @@ export const manga = [
   },
   {
     id: 4,
-    name: " Bleach - Tập 72: My Last Words",
-    image: "../../assets/mobile_image/bleach---tap-72.jpg",
+    name: "Bleach - Tập 72: My Last Words",
+    image: "bleach---tap-72.jpg",
     price: 50000,
     type: ["action", "fantasy", "comedy", "16+"],
     description:
@@ -48,8 +46,8 @@ export const manga = [
   },
   {
     id: 5,
-    name: " SPY X Family Tập 1",
-    image: "../../assets/spy-x-family-tap-1_1.jpg",
+    name: "SPY X Family Tập 1",
+    image: "spy-x-family-tap-1_1.jpg",
     price: 55000,
     type: ["action", "comedy", "13+"],
     description:
@@ -57,8 +55,8 @@ export const manga = [
   },
   {
     id: 6,
-    name: " SPY X Family Tập 2",
-    image: "../../assets/spy-x-family-tap-2.jpg",
+    name: "SPY X Family Tập 2",
+    image: "spy-x-family-tap-2.jpg",
     price: 55000,
     type: ["action", "comedy", "13+"],
     description:
@@ -66,8 +64,8 @@ export const manga = [
   },
   {
     id: 7,
-    name: " SPY X Family Tập 3",
-    image: "../../assets/spy-x-family---tap-3 (1).jpg",
+    name: "SPY X Family Tập 3",
+    image: "spy-x-family---tap-3 (1).jpg",
     price: 55000,
     type: ["action", "comedy", "13+"],
     description:
@@ -75,8 +73,8 @@ export const manga = [
   },
   {
     id: 7,
-    name: " SPY X Family Tập 5",
-    image: "../../assets/spy-x-family-tap-5---ban-thuong.jpg",
+    name: "SPY X Family Tập 5",
+    image: "spy-x-family-tap-5---ban-thuong.jpg",
     price: 55000,
     type: ["action", "comedy", "13+"],
     description:
@@ -84,8 +82,8 @@ export const manga = [
   },
   {
     id: 8,
-    name: " SPY X Family Tập 6",
-    image: "../../assets/spy-x-family---tap-6-_ban-thuong_.jpg",
+    name: "SPY X Family Tập 6",
+    image: "spy-x-family---tap-6-_ban-thuong_.jpg",
     price: 55000,
     type: ["action", "comedy", "13+"],
     description:
@@ -93,8 +91,8 @@ export const manga = [
   },
   {
     id: 9,
-    name: " SPY X Family Tập 7",
-    image: "../../assets/spy---family---tap-7-_b_a-1__1.jpg",
+    name: "SPY X Family Tập 7",
+    image: "spy---family---tap-7-_b_a-1__1.jpg",
     price: 55000,
     type: ["action", "comedy", "13+"],
     description:
@@ -103,7 +101,7 @@ export const manga = [
   {
     id: 10,
     name: "UZUMAKI NARUTO Art Book",
-    image: "../../assets/naruto-artbook.jpg",
+    image: "naruto-artbook.jpg",
     price: 55000,
     type: ["action", "comedy", "13+"],
     description:
@@ -112,7 +110,7 @@ export const manga = [
   {
     id: 11,
     name: "KOMI - NỮ THẦN SỢ GIAO TIẾP - TẬP 2",
-    image: "../../assets/komi_-nu-than-so-giao-tiep---tap-2.jpg",
+    image: "komi_-nu-than-so-giao-tiep---tap-2.jpg",
     price: 40000,
     type: ["school-life", "comedy", "13+", "romance"],
     description:
@@ -121,7 +119,7 @@ export const manga = [
   {
     id: 12,
     name: "KOMI - NỮ THẦN SỢ GIAO TIẾP - TẬP 3",
-    image: "../../assets/komi-nu-than-so-giao-tiep_tap-3_1.jpg",
+    image: "komi-nu-than-so-giao-tiep_tap-3_1.jpg",
     price: 40000,
     type: ["school-life", "comedy", "13+", "romance"],
     description:
@@ -130,7 +128,7 @@ export const manga = [
   {
     id: 13,
     name: "KOMI - NỮ THẦN SỢ GIAO TIẾP - TẬP 4",
-    image: "../../assets/komi---nu-than-so-giao-tiep-_-tap-4.jpg",
+    image: "komi---nu-than-so-giao-tiep-_-tap-4.jpg",
     price: 40000,
     type: ["school-life", "comedy", "13+", "romance"],
     description:
@@ -139,7 +137,7 @@ export const manga = [
   {
     id: 14,
     name: "KOMI - NỮ THẦN SỢ GIAO TIẾP - TẬP 6",
-    image: "../../assets/komi---nu-than-so-giao-tiep-_-tap-6.jpg",
+    image: "komi---nu-than-so-giao-tiep-_-tap-6.jpg",
     price: 40000,
     type: ["school-life", "comedy", "13+", "romance"],
     description:
@@ -148,7 +146,7 @@ export const manga = [
   {
     id: 15,
     name: "KOMI - NỮ THẦN SỢ GIAO TIẾP - TẬP 7",
-    image: "../../assets/komi---nu-than-so-giao-tiep-_-tap-7.jpg",
+    image: "komi---nu-than-so-giao-tiep-_-tap-7.jpg",
     price: 40000,
     type: ["school-life", "comedy", "13+", "romance"],
     description:
@@ -157,7 +155,7 @@ export const manga = [
   {
     id: 16,
     name: "KOMI - NỮ THẦN SỢ GIAO TIẾP - TẬP 8",
-    image: "../../assets/komi---nu-than-so-giao-tiep-_-tap-8_1.jpg",
+    image: "komi---nu-than-so-giao-tiep-_-tap-8_1.jpg",
     price: 40000,
     type: ["school-life", "comedy", "13+", "romance"],
     description:
@@ -166,7 +164,7 @@ export const manga = [
   {
     id: 17,
     name: "KOMI - NỮ THẦN SỢ GIAO TIẾP - TẬP 9",
-    image: "../../assets/komi-nu-than-so-giao-tiep---tap-9.jpg",
+    image: "komi-nu-than-so-giao-tiep---tap-9.jpg",
     price: 40000,
     type: ["school-life", "comedy", "13+", "romance"],
     description:
@@ -175,7 +173,7 @@ export const manga = [
   {
     id: 18,
     name: "KOMI - NỮ THẦN SỢ GIAO TIẾP - TẬP 10",
-    image: "../../assets/komi---nu-than-so-giao-tiep---tap-10_1.jpg",
+    image: "komi---nu-than-so-giao-tiep---tap-10_1.jpg",
     price: 40000,
     type: ["school-life", "comedy", "13+", "romance"],
     description:
@@ -184,7 +182,7 @@ export const manga = [
   {
     id: 19,
     name: "KOMI - NỮ THẦN SỢ GIAO TIẾP - TẬP 11",
-    image: "../../assets/komi-nu-than-so-giao-tiep---tap-11.jpg",
+    image: "komi-nu-than-so-giao-tiep---tap-11.jpg",
     price: 40000,
     type: ["school-life", "comedy", "13+", "romance"],
     description:
@@ -193,7 +191,7 @@ export const manga = [
   {
     id: 20,
     name: "Onepiece Tập 99",
-    image: "../../assets/one-piece---tap-99---ban-bia-gap.jpg",
+    image: "one-piece---tap-99---ban-bia-gap.jpg",
     price: 40000,
     type: ["action", "comedy", "16+", "humor"],
     description:
@@ -204,7 +202,7 @@ export const vanhoc = [
   {
     id: 0,
     name: "Bleach - Tập 67: Black",
-    image: "../../assets/mobile_image/bleach---tap-67---black.jpg",
+    image: "bleach---tap-67---black.jpg",
     price: 50000,
     type: ["action", "fantasy", "comedy", "16+"],
     description:
