@@ -16,7 +16,15 @@ import {
 } from "react-native";
 // import { StatusBar } from 'expo-status-bar';
 import ProductItem from "../components/ProductItem";
-import { manga } from "../data/book";
+import {
+  manga,
+  vanhoc,
+  doisong,
+  kinhte,
+  tieuxuhoiki,
+  nuoidaycon,
+  tienganh,
+} from "../data/book";
 
 export default function HomeScreen({ navigation }) {
   const [user, setuser] = useState(null);
@@ -65,7 +73,7 @@ export default function HomeScreen({ navigation }) {
             { img: require("../../assets/banner/vanhockinhdien.jpg") },
             { img: require("../../assets/banner/collection_banner.webp") },
             { img: require("../../assets/banner/slide_2_img.webp") },
-            { img: require("../../assets/banner/1212541.jpg") },
+            // { img: require("../../assets/banner/1212541.jpg") },
           ]}
           localImg
           timer={6000}
@@ -84,6 +92,7 @@ export default function HomeScreen({ navigation }) {
           styles={{ position: "relative" }}
         />
         <StatusBar backgroundColor={"#f4e6dc"} barStyle={"dark-content"} />
+        {/* MANGA */}
         <View style={styles.titleContainer}>
           <Image
             source={require("../../assets/icon/flame.png")}
@@ -93,6 +102,96 @@ export default function HomeScreen({ navigation }) {
         </View>
         <FlatList
           data={manga}
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          keyExtractor={(item, index) => item + index}
+          renderItem={renderItem}
+        />
+        {/* DOI SONG */}
+        <View style={styles.titleContainer}>
+          <Image
+            source={require("../../assets/icon/light-bulb.png")}
+            style={styles.icon}
+          />
+          <Text style={styles.title}>KỸ NĂNG SỐNG</Text>
+        </View>
+        <FlatList
+          data={doisong}
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          keyExtractor={(item, index) => item + index}
+          renderItem={renderItem}
+        />
+        {/* KINH TE */}
+        <View style={styles.titleContainer}>
+          <Image
+            source={require("../../assets/icon/piggy-bank.png")}
+            style={styles.icon}
+          />
+          <Text style={styles.title}>KINH TẾ</Text>
+        </View>
+        <FlatList
+          data={kinhte}
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          keyExtractor={(item, index) => item + index}
+          renderItem={renderItem}
+        />
+        {/* VANHOC */}
+        <View style={styles.titleContainer}>
+          <Image
+            source={require("../../assets/icon/manuscript.png")}
+            style={styles.icon}
+          />
+          <Text style={styles.title}>VĂN HỌC</Text>
+        </View>
+        <FlatList
+          data={vanhoc}
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          keyExtractor={(item, index) => item + index}
+          renderItem={renderItem}
+        />
+        {/* tieu su */}
+        <View style={styles.titleContainer}>
+          <Image
+            source={require("../../assets/icon/abraham-lincoln.png")}
+            style={styles.icon}
+          />
+          <Text style={styles.title}>TIỂU SỬ HỒI KÍ</Text>
+        </View>
+        <FlatList
+          data={tieuxuhoiki}
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          keyExtractor={(item, index) => item + index}
+          renderItem={renderItem}
+        />
+        {/* nuoi day con */}
+        <View style={styles.titleContainer}>
+          <Image
+            source={require("../../assets/icon/blackboard.png")}
+            style={styles.icon}
+          />
+          <Text style={styles.title}>NUÔI DẠY CON</Text>
+        </View>
+        <FlatList
+          data={nuoidaycon}
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          keyExtractor={(item, index) => item + index}
+          renderItem={renderItem}
+        />
+        {/* TIENG ANH */}
+        <View style={styles.titleContainer}>
+          <Image
+            source={require("../../assets/icon/eng.png")}
+            style={styles.icon}
+          />
+          <Text style={styles.title}>TIẾNG ANH</Text>
+        </View>
+        <FlatList
+          data={tienganh}
           horizontal
           showsHorizontalScrollIndicator={false}
           keyExtractor={(item, index) => item + index}

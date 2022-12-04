@@ -16,10 +16,7 @@ function ProductItem(props) {
       style={{ ...styles.container, marginLeft: index == 0 ? 12 : 22 }}
       onPress={goToDetail}
     >
-      <Image
-        style={styles.imageStyle}
-        source={require("../../assets/mobile_image/bleach---tap-67---black.jpg")}
-      />
+      <Image style={styles.imageStyle} source={{ uri: item?.image }} />
       <View style={styles.infoContainer}>
         <Text
           numberOfLines={1}
@@ -47,7 +44,7 @@ const styles = StyleSheet.create({
   imageStyle: {
     resizeMode: "contain",
     width: 160,
-    height: 150,
+    height: 160,
     borderRadius: 14,
   },
   container: {
@@ -67,6 +64,8 @@ const styles = StyleSheet.create({
     shadowRadius: 4.65,
 
     elevation: 8,
+
+    borderWidth: 1,
   },
   infoContainer: {
     paddingHorizontal: 12,

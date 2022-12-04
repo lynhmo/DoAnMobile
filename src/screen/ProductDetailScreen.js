@@ -11,12 +11,12 @@ import { Ionicons } from "@expo/vector-icons";
 import { Picker } from "@react-native-picker/picker";
 import CustomButton from "../components/CustomButton";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { manga } from "../data/book";
 
 export default function ProductDetailScreen({ navigation, route }) {
   const params = route.params;
   const { item } = params;
   const [amount, setAmount] = useState(1);
-  // const [size, setSize] = useState(item.size[0]);
   const onGoBack = () => {
     navigation.goBack();
   };
@@ -42,7 +42,8 @@ export default function ProductDetailScreen({ navigation, route }) {
       });
     }
     AsyncStorage.setItem("cartData", JSON.stringify(cartData));
-    navigation.navigate("CartScreen");
+    alert("Adđe to cart successfully!");
+    navigation.navigate("HomeTab");
   };
   return (
     <ScrollView style={{ backgroundColor: "#f4e6dc", flex: 1 }}>
@@ -70,7 +71,7 @@ export default function ProductDetailScreen({ navigation, route }) {
         </TouchableOpacity>
         <Image
           style={{ width: "100%", height: 400, marginTop: 12 }}
-          source={require("../../assets/mobile_image/dac-nhan-tam.jpg")}
+          source={{ uri: item.image }}
         />
       </View>
       <View style={{ paddingHorizontal: 12, marginTop: 12, paddingBottom: 30 }}>

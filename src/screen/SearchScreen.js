@@ -8,9 +8,9 @@ import {
   FlatList,
   SafeAreaView,
 } from "react-native";
-// import ProductItemHorizontal from "../../components/ProductItemHorizontal";
+import SearchProduct from "../components/SearchProduct";
 import InputForm from "../components/InputForm";
-// import { dummyData } from "../../data/product";
+import { manga } from "../data/book";
 export default function SearchScreen({ navigation }) {
   const [textSearch, settextSearch] = useState("");
   const categories = [
@@ -24,22 +24,22 @@ export default function SearchScreen({ navigation }) {
     "NGƯỜI GIÀU CÓ NHẤT THÀNH BABYLON",
   ];
   const renderResult = () => {
-    // const data = dummyData.filter((value) =>
-    //   value.name.toLocaleLowerCase().includes(textSearch.toLocaleLowerCase())
-    // );
-    // const renderItem = ({ item, index }) => (
-    //   <ProductItemHorizontal item={item} navigation={navigation} />
-    // );
+    const mangaFilter = manga.filter((value) =>
+      value.name.toLocaleLowerCase().includes(textSearch.toLocaleLowerCase())
+    );
+    const renderItem = ({ item, index }) => (
+      <SearchProduct item={item} navigation={navigation} />
+    );
     return (
       <View style={{ flex: 1, flexDirection: "column" }}>
         <Text style={{ fontSize: 12, fontWeight: "bold", marginBottom: 10 }}>
           KẾT QUẢ
         </Text>
-        {/* <FlatList
-          data={data}
+        <FlatList
+          data={mangaFilter}
           keyExtractor={(item, index) => item + index}
           renderItem={renderItem}
-        /> */}
+        />
       </View>
     );
   };
@@ -65,7 +65,7 @@ export default function SearchScreen({ navigation }) {
         renderResult()
       ) : (
         <>
-          <Text style={{ fontSize: 12, fontWeight: "bold", marginBottom: 10 }}>
+          <Text style={{ fontSize: 16, fontWeight: "bold", marginBottom: 10 }}>
             Recommended
           </Text>
           <View style={{ flexDirection: "row", flexWrap: "wrap" }}>
