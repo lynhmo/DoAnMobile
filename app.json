@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Do-An-Mobile",
-    "slug": "Do-An-Mobile",
+    "slug": "kitten-library",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -12,7 +12,8 @@
       "backgroundColor": "#ffffff"
     },
     "updates": {
-      "fallbackToCacheTimeout": 0
+      "fallbackToCacheTimeout": 0,
+      "url": "https://u.expo.dev/e0bb9c43-5822-4574-87ec-135a91762adf"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -28,6 +29,15 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "e0bb9c43-5822-4574-87ec-135a91762adf"
+      }
+    },
+    "owner": "llu1ts",
+    "runtimeVersion": {
+      "policy": "sdkVersion"
     }
   }
 }

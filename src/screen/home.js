@@ -43,6 +43,13 @@ export default function HomeScreen({ navigation }) {
         }}
       >
         <View style={styles.searchContainer}>
+          <Image
+            source={require("../../assets/Logo/logo-kitten.png")}
+            style={{
+              width: 60,
+              height: 60,
+            }}
+          />
           <Searchbar
             placeholder="Search"
             onChangeText={onChangeSearch}
@@ -101,12 +108,13 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   search: {
-    marginTop: 10,
+    // marginTop: 10,
     borderRadius: 50,
-    width: "90%",
+    width: "80%",
   },
   searchContainer: {
     alignItems: "center",
+    flexDirection: "row",
   },
   title: {
     fontSize: 22,
