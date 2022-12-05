@@ -42,7 +42,7 @@ export default function ProductDetailScreen({ navigation, route }) {
       });
     }
     AsyncStorage.setItem("cartData", JSON.stringify(cartData));
-    alert("Adđe to cart successfully!");
+    alert("Add to cart successfully!");
     navigation.navigate("HomeTab");
   };
   return (
