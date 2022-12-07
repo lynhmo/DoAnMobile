@@ -20,7 +20,7 @@ export default function Login({ navigation }) {
     navigation.navigate("Register");
   };
   const loginUser = () => {
-    return fetch("https://dienmayblue.site/PHP_Server/Login.php", {
+    return fetch("http://botstore.space/PHP_Server/Login.php", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -35,7 +35,6 @@ export default function Login({ navigation }) {
       .then((responseJson) => {
         // If server response message same as Data Matched
         if (responseJson === "Data Matched") {
-          //   Alert.alert("Đăng nhập thành công");
           //Then open Profile activity and send user email to profile activity.
           navigation.navigate("HomeTab");
         } else {

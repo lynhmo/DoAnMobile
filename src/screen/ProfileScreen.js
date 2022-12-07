@@ -1,6 +1,13 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import React, { useEffect, useState } from "react";
-import { View, Text, StatusBar, Image, SafeAreaView } from "react-native";
+import {
+  View,
+  Text,
+  StatusBar,
+  Image,
+  SafeAreaView,
+  StyleSheet,
+} from "react-native";
 import CustomButton from "../components/CustomButton";
 
 export default function ProfileScreen({ navigation }) {
@@ -21,39 +28,10 @@ export default function ProfileScreen({ navigation }) {
     getUserData(user);
   }, []);
   return (
-    <SafeAreaView
-      style={{
-        backgroundColor: "#f4e6dc",
-        flex: 1,
-        width: "100%",
-        paddingHorizontal: 12,
-      }}
-    >
-      <View
-        style={{
-          marginTop: 20,
-          marginBottom: 20,
-          // flex: 1,
-          height: 130,
-          width: 130,
-          alignItems: "center",
-          borderRadius: 100,
-          borderWidth: 2,
-          borderColor: "#07204c",
-          alignSelf: "center",
-        }}
-      >
+    <SafeAreaView style={styles.container}>
+      <View style={styles.imageContainer}>
         <Image
-          style={{
-            height: 100,
-            width: 100,
-            // borderRadius: 100,
-            // borderWidth: 2,
-            // borderColor: "#07204c",
-            alignSelf: "center",
-            alignContent: "center",
-            justifyContent: "center",
-          }}
+          style={styles.imageProfilers}
           source={require("../../assets/icon/user.png")}
         />
       </View>
@@ -68,3 +46,29 @@ export default function ProfileScreen({ navigation }) {
     </SafeAreaView>
   );
 }
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: "#f4e6dc",
+    flex: 1,
+    width: "100%",
+    paddingHorizontal: 12,
+  },
+  imageContainer: {
+    marginTop: 20,
+    marginBottom: 20,
+    height: 130,
+    width: 130,
+    alignItems: "center",
+    borderRadius: 100,
+    borderWidth: 2,
+    borderColor: "#07204c",
+    alignSelf: "center",
+  },
+  imageProfilers: {
+    height: 100,
+    width: 100,
+    alignSelf: "center",
+    alignContent: "center",
+    justifyContent: "center",
+  },
+});

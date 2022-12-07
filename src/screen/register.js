@@ -17,7 +17,7 @@ export default function Register({ navigation }) {
     navigation.goBack();
   };
   const SignUp = () => {
-    return fetch("https://dienmayblue.site/PHP_Server/Signup.php", {
+    return fetch("http://botstore.space/PHP_Server/Signup.php", {
       method: "POST",
       headers: {
         Accept: "application/json",

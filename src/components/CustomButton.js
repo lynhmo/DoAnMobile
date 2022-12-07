@@ -13,9 +13,7 @@ export default function CustomButton(props) {
       }}
       onPress={onPress}
     >
-      <Text
-        style={{ ...styles.title, color: isSubButton ? "#333" : "#fff" }}
-      >
+      <Text style={{ ...styles.title, color: isSubButton ? "#333" : "#fff" }}>
         {title}
       </Text>
     </TouchableOpacity>

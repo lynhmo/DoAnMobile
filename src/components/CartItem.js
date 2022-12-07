@@ -56,7 +56,7 @@ export default function CartItem(props) {
     >
       <Image
         source={{ uri: item.image }}
-        style={{ height: 80, width: 80, borderRadius: 20, marginRight: 12 }}
+        style={{ height: 80, width: 80, borderRadius: 20 }}
       />
       <View style={{ flex: 1 }}>
         <View style={{ flexDirection: "row" }}>
@@ -69,32 +69,37 @@ export default function CartItem(props) {
               {item.owner}
             </Text>
           </View>
+          {/* add remove */}
           <View style={{ alignItems: "center", flexDirection: "row" }}>
             <TouchableOpacity
               onPress={handleOnRemove}
-              style={{ backgroundColor: "#333", borderRadius: 8 }}
+              style={{ backgroundColor: "#333", borderRadius: 5 }}
             >
-              <Ionicons name="remove" size={24} color="#fff" />
+              <Ionicons name="remove" size={20} color="#fff" />
             </TouchableOpacity>
             <Text style={{ fontWeight: "bold", marginHorizontal: 15 }}>
               {amount}
             </Text>
             <TouchableOpacity
               onPress={handleOnAdd}
-              style={{ backgroundColor: "#333", borderRadius: 8 }}
+              style={{ backgroundColor: "#333", borderRadius: 5 }}
             >
-              <Ionicons name="add" size={24} color="#fff" />
+              <Ionicons name="add" size={20} color="#fff" />
             </TouchableOpacity>
           </View>
+          {/* delete */}
           <TouchableOpacity
             onPress={handleDelete}
             style={{
-              marginLeft: 25,
+              marginLeft: 15,
               marginRight: 6,
               justifyContent: "center",
             }}
           >
-            <AntDesign name="delete" size={24} color="red" />
+            <Image
+              source={require("../../assets/icon/delete.png")}
+              style={{ width: 20, height: 20 }}
+            />
           </TouchableOpacity>
         </View>
       </View>

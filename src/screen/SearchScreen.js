@@ -10,10 +10,10 @@ import {
 } from "react-native";
 import SearchProduct from "../components/SearchProduct";
 import InputForm from "../components/InputForm";
-import { manga } from "../data/book";
+import { manga, All } from "../data/book";
 export default function SearchScreen({ navigation }) {
   const [textSearch, settextSearch] = useState("");
-  const categories = [
+  const suggestion = [
     "SPY X FAMILY",
     "CONAN",
     "RE:LIFE",
@@ -24,7 +24,7 @@ export default function SearchScreen({ navigation }) {
     "NGƯỜI GIÀU CÓ NHẤT THÀNH BABYLON",
   ];
   const renderResult = () => {
-    const mangaFilter = manga.filter((value) =>
+    const BookFilter = All.filter((value) =>
       value.name.toLocaleLowerCase().includes(textSearch.toLocaleLowerCase())
     );
     const renderItem = ({ item, index }) => (
@@ -36,7 +36,7 @@ export default function SearchScreen({ navigation }) {
           KẾT QUẢ
         </Text>
         <FlatList
-          data={mangaFilter}
+          data={BookFilter}
           keyExtractor={(item, index) => item + index}
           renderItem={renderItem}
         />
@@ -48,9 +48,7 @@ export default function SearchScreen({ navigation }) {
       style={{
         backgroundColor: "#f4e6dc",
         flex: 1,
-        // paddingTop: 20,
         paddingHorizontal: 12,
-        // marginTop: 33,
       }}
     >
       <View style={{ marginTop: 20 }}>
@@ -69,7 +67,7 @@ export default function SearchScreen({ navigation }) {
             Recommended
           </Text>
           <View style={{ flexDirection: "row", flexWrap: "wrap" }}>
-            {categories.map((value, item) => (
+            {suggestion.map((value, item) => (
               <TouchableOpacity
                 onPress={() => {
                   settextSearch(value);

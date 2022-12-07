@@ -14,6 +14,7 @@ import { useState } from "react";
 import CustomButton from "../components/CustomButton";
 import { Ionicons } from "@expo/vector-icons";
 import CartItem from "../components/CartItem";
+import { Button } from "react-native-paper";
 
 export default function CartScreen() {
   const isFocused = useIsFocused();
@@ -70,9 +71,9 @@ export default function CartScreen() {
             flex: 1,
           }}
         >
-          GIỎ HÀNG
+          SHOPPING CART
         </Text>
-        <Text
+        {/* <Text
           style={{
             fontWeight: "bold",
             fontSize: 16,
@@ -88,7 +89,7 @@ export default function CartScreen() {
           }}
         >
           {getTotal()} VND
-        </Text>
+        </Text> */}
       </View>
       {cartList.length > 0 ? (
         <FlatList
@@ -101,18 +102,59 @@ export default function CartScreen() {
         <View
           style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
         >
-          <Ionicons name="cart-outline" size={130} color="gray" />
-          <Text style={{ color: "gray", fontSize: 20 }}>
-            Giỏ hàng đang trống
-          </Text>
+          {/* <Ionicons name="cart-outline" size={130} color="gray" /> */}
+          <Image
+            source={require("../../assets/icon/shopping-bag.png")}
+            style={{ width: 150, height: 150, tintColor: 80 }}
+          />
+          <Text style={{ color: "gray", fontSize: 20 }}>Cart is emty!</Text>
         </View>
       )}
-
-      <CustomButton
-        onPress={onFinish}
-        style={{ marginVertical: 12 }}
-        title={"Check Out"}
-      />
+      <View
+        style={{
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "space-between",
+        }}
+      >
+        <View>
+          <Text
+            style={{
+              fontWeight: "bold",
+              fontSize: 16,
+            }}
+          >
+            {"TOTAL: "}
+          </Text>
+          <Text
+            style={{
+              fontWeight: "bold",
+              fontSize: 18,
+              color: "#333",
+            }}
+          >
+            {getTotal()} VND
+          </Text>
+        </View>
+        {/* <CustomButton
+          onPress={onFinish}
+          style={{ marginVertical: 12 }}
+          title={"Check Out"}
+        /> */}
+        <Button
+          onPress={onFinish}
+          style={{
+            justifyContent: "center",
+            alignItems: "center",
+            paddingVertical: 10,
+            backgroundColor: "#ea7f0a",
+            borderRadius: 100,
+            marginVertical: 12,
+          }}
+        >
+          <Text style={{ color: "#f4e6dc", fontSize: 20 }}>Check Out</Text>
+        </Button>
+      </View>
     </SafeAreaView>
   );
 }

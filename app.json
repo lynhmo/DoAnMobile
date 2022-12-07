@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "Do-An-Mobile",
+    "name": "Kitten Library",
     "slug": "kitten-library",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/Logo/kitten-logo.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
@@ -24,8 +24,8 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+        "foregroundImage": "./assets/Logo/kitten-logo.png",
+        "backgroundColor": "#ea7f0a"
       },
       "package": "com.llu1ts.kittenlibrary"
     },
