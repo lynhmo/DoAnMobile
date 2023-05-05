@@ -1,2 +1,2 @@
-## Bài tập lớn Mobile
-# Code bằng ReactNative
+# Bài tập lớn Mobile
+## Code bằng ReactNative
